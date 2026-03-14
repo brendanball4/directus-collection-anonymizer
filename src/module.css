@@ -1,0 +1,184 @@
+.anonymizer-page {
+	padding: 20px 24px 28px;
+}
+
+.anonymizer-wrapper {
+	display: grid;
+	gap: 20px;
+	max-width: 1080px;
+	width: min(1080px, 100%);
+	margin: 0 auto;
+}
+
+.anonymizer-subtitle {
+	color: var(--theme--foreground-subdued);
+	margin: 0;
+	line-height: 1.5;
+	font-size: 14px;
+}
+
+.anonymizer-sections {
+	display: grid;
+	gap: 16px;
+}
+
+.anonymizer-card {
+	background: var(--theme--background-normal);
+	border: 1px solid var(--theme--border-color-subdued);
+	border-radius: 10px;
+	padding: 18px;
+	box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+}
+
+.anonymizer-card-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 12px;
+}
+
+.anonymizer-label {
+	display: block;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.anonymizer-input {
+	width: 100%;
+	background: var(--theme--background-page);
+	border: 1px solid var(--theme--border-color-normal);
+	border-radius: 8px;
+	padding: 10px;
+	min-height: 220px;
+	color: var(--theme--foreground-normal);
+}
+
+.anonymizer-input option {
+	background: var(--theme--background-page);
+	color: var(--theme--foreground-normal);
+}
+
+.anonymizer-input option:checked {
+	background: var(--theme--primary);
+	color: var(--theme--primary-alt);
+}
+
+.anonymizer-hint {
+	font-size: 12px;
+	color: var(--theme--foreground-subdued);
+	margin: 8px 0 0;
+}
+
+.anonymizer-field-list {
+	display: grid;
+	gap: 0;
+}
+
+.anonymizer-field-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 10px 0;
+	border-bottom: 1px solid var(--theme--border-color-subdued);
+}
+
+.anonymizer-field-row:first-child {
+	padding-top: 4px;
+}
+
+.anonymizer-field-row:last-child {
+	border-bottom: 0;
+	padding-bottom: 2px;
+}
+
+.anonymizer-field-label {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	flex-wrap: wrap;
+	font-size: 14px;
+}
+
+.anonymizer-type {
+	font-size: 11px;
+}
+
+.anonymizer-type-select {
+	min-width: 220px;
+	background: var(--theme--background-page);
+	border: 1px solid var(--theme--border-color-normal);
+	border-radius: 8px;
+	padding: 8px 10px;
+}
+
+.anonymizer-actions {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	padding-top: 2px;
+}
+
+.anonymizer-warning-card {
+	background: color-mix(in oklab, var(--theme--warning) 15%, var(--theme--background-normal));
+	border: 1px solid color-mix(in oklab, var(--theme--warning) 45%, var(--theme--border-color-subdued));
+	border-radius: 10px;
+	padding: 14px 16px;
+}
+
+.anonymizer-warning-title {
+	margin: 0 0 6px;
+	font-weight: 700;
+	color: var(--theme--warning);
+}
+
+.anonymizer-warning-text {
+	margin: 0;
+	line-height: 1.4;
+}
+
+.anonymizer-warning-checkbox {
+	display: inline-flex;
+	align-items: flex-start;
+	gap: 10px;
+	margin-top: 12px;
+}
+
+.anonymizer-primary {
+	background: var(--theme--primary);
+	color: var(--theme--primary-alt);
+	border: 0;
+	border-radius: 8px;
+	padding: 11px 16px;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.anonymizer-primary[disabled] {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.anonymizer-summary h3 {
+	margin-top: 0;
+}
+
+@media (max-width: 900px) {
+	.anonymizer-page {
+		padding: 16px;
+	}
+
+	.anonymizer-wrapper {
+		gap: 16px;
+	}
+
+	.anonymizer-field-row {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.anonymizer-type-select {
+		min-width: 0;
+		width: 100%;
+	}
+}
