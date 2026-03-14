@@ -38,7 +38,16 @@ npm run build
 
 Copy the `collection-data-anonymizer` folder (with `package.json` and `dist/` inside) into your Directus `extensions/` directory. Restart Directus.
 
-## Usage -- On Directus Web App
+**Using Docker Compose?** Add this volume so the container can load extensions:
+
+```yaml
+volumes:
+  - ./extensions:/directus/extensions
+```
+
+Put the extension at `./extensions/collection-data-anonymizer/` (next to your `docker-compose.yml`). Restart the container after adding or updating.
+
+## Usage
 
 1. Open the **Data Anonymizer** module in the sidebar. If you are not able to see it in the sidebar, go to settings > settings > modules, and select the Data Anonymizer and make sure to save. It will appear on the sidebar.
 2. Pick one or more collections. You are able to multi-select using ctrl, or cmd. Else it will just select one collection at a time.
