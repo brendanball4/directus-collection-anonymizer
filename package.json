@@ -1,6 +1,6 @@
 {
 	"name": "collection-data-anonymizer",
-	"description": "Please enter a description for your extension",
+	"description": "Anonymize collection data with realistic fake values (names, emails, addresses, etc.) for dev/staging.",
 	"icon": "extension",
 	"version": "1.0.0",
 	"keywords": [
